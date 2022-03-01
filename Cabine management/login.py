@@ -1,6 +1,8 @@
 from tkinter import *
 import os
 
+global dct
+dct = {}
 def delete2():
   screen3.destroy()
 
@@ -17,9 +19,9 @@ def login_sucess():
   screen3.geometry("400x400")
     
   def importer():
-    global dct
+    
     f = open('contacts.txt','r')
-    dct = {}
+    
     for ch in f:
         l = ch.split(':')
         nom = l[0]
